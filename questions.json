@@ -1,0 +1,16 @@
+{
+    "topic": "Python Basics",
+    "lesson": "A list is mutable, a tuple is immutable. A dictionary stores key-value pairs.",
+    "questions": [
+      {
+        "question": "Which one is immutable?",
+        "options": ["list", "tuple", "dictionary"],
+        "answer": "tuple"
+      },
+      {
+        "question": "How do you install a library?",
+        "options": ["pip install", "python get", "venv add"],
+        "answer": "pip install"
+      }
+    ]
+  }
