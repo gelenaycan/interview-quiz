@@ -1,9 +1,18 @@
-import json
-with open("questions.json","r", encoding="utf-8") as file:  #with with we dont need to use close(), automaticly done
-    data =json.load(file) 
+import os
+import certifi
+from dotenv import load_dotenv
+from pymongo import MongoClient
+
+
+load_dotenv()
+client = MongoClient(os.getenv("MONGO_URI"), tlsCAFile=certifi.where())
+collection = client["interview_quiz"]["topics"]
+
+data = collection.find_one({"topic":"Python Basics"})
 
 print(data["topic"])
 print(data["lesson"])
+print()
 
 score=0
 for question in data["questions"]:
